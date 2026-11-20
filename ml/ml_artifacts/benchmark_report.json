@@ -1,0 +1,10 @@
+{
+  "fp32_size_bytes": 49680,
+  "int8_size_bytes": 14256,
+  "compression_ratio": 3.48,
+  "estimated_tensor_ram_kb": 2.29,
+  "test_accuracy_fp32": 1.0,
+  "test_accuracy_int8": 1.0,
+  "fp32_latency_ms": 2.4452,
+  "int8_latency_ms": 2.1568
+}
