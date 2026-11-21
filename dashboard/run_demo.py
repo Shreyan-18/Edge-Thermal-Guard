@@ -63,7 +63,9 @@ def stream_output(pipe, label):
             if not line:
                 break
             text = line.rstrip()
-            # Only print meaningful logs to avoid console clutter
+            # Clean up escaped unicode emoji on Windows console
+            text = text.replace("\\U0001f6a8", "🚨").replace("\\u0001f6a8", "🚨")
+            # Print meaningful logs
             if any(k in text for k in ("Starting", "Listening", "RUNAWAY", "FAILSAFE", "Registered", "ONLINE", "OFFLINE", "URL:", "http://")):
                 print(f"[{label}] {text}", flush=True)
     except Exception:

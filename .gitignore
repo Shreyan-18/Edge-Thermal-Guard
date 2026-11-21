@@ -33,6 +33,7 @@ ml/ml_artifacts/*.pb
 *.log
 collector/anomaly_log.jsonl
 collector/node_states.json
+collector/console_feed.txt
 
 # OS artifacts
 .DS_Store
